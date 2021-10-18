@@ -257,7 +257,8 @@ def cli_main():
     # ------------
     # data
     # ------------
-    datamodule = NoveltyDataModule(data_dir=args.data_dir,bert_model = args.bert_model, max_len = args.max_len, batch_size=args.batch_size)
+    data_dir = os.path.join(args.data_dir,'dlnd.jsonl')
+    datamodule = NoveltyDataModule(data_dir=data_dir,bert_model = args.bert_model, max_len = args.max_len, batch_size=args.batch_size)
 
 
     # ------------
